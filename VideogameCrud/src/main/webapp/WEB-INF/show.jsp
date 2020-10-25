@@ -15,6 +15,8 @@
 		<div class="row row-no-gutters">
 			<div class="col-xs-6 col-md-4"></div>
 			<div class="col-xs-6 col-md-4 text-center">
+			<!-- <form action="listOfVideogames.do" method="GET">
+			</form> -->
 				<h3 style="font-family: Impact, Charcoal, sans-serif;">
 					<strong>${videogame.title}</strong>
 				</h3>

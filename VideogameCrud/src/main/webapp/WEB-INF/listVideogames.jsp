@@ -19,24 +19,26 @@
 		<div class="row row-no-gutters">
 			<div class="col-xs-6 col-md-4"></div>
 			<div class="col-xs-6 col-md-4 text-center">
-			
+
 				<table class="table table-striped table-hover">
-			<thead class="thead thead-dark">
-				<tr>
-					<th>Game ID</th>
-					<th>Title</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${videogames}" var="theGame">
-					<tr>
-						<td>${theGame.id}</td>
-						<td>${theGame.title}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-				
+					<thead class="thead thead-dark">
+						<tr>
+							<th>Game ID</th>
+							<th>Title</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${videogames}" var="theGame">
+							<tr>
+								<td>${theGame.id }</td>
+								<td>${theGame.title }</td>
+								<%-- 	<td>${theGame.id}</td>
+						<td>${theGame.title}</td> --%>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+
 			</div>
 			<div class="col-xs-6 col-md-4"></div>
 		</div>

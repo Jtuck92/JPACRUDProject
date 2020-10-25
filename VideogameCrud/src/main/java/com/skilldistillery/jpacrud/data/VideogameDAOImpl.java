@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.skilldistillery.jpacrud.entities.Videogame;
 
 @Transactional
+@Service
 public class VideogameDAOImpl implements VideogameDAO {
 
 	@PersistenceContext
@@ -24,7 +25,8 @@ public class VideogameDAOImpl implements VideogameDAO {
 	@Override
 	public List<Videogame> findVideogames() {
 		String jpql = "SELECT v FROM Videogame v";
-		return em.createQuery(jpql, Videogame.class).getResultList();
+		List<Videogame> result = em.createQuery(jpql, Videogame.class).getResultList();
+		return result;
 	}
 
 	@Override
@@ -52,6 +54,7 @@ public class VideogameDAOImpl implements VideogameDAO {
 	@Override
 	public Videogame createVideogame(Videogame videogame) {
 		em.persist(videogame);
+		em.flush();
 		return videogame;
 	}
 

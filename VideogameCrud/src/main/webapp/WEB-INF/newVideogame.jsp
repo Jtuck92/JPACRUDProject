@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Create Game</title>
+<title>Add Game</title>
 </head>
 <jsp:include page="navbar.jsp"><jsp:param value="" name="" /></jsp:include>
 <br>
@@ -16,7 +16,7 @@
 		<div class="row row-no-gutters">
 			<div class="col-xs-6 col-md-4"></div>
 			<div class="col-xs-6 col-md-4 text-center">
-				<form:form action="newVideogame.do" method="POST"
+				<form:form action="addVideogame.do" method="GET"
 					modelAttribute="videogame">
 					<div class="form-row">
 						<div class="form-group col-md-6">

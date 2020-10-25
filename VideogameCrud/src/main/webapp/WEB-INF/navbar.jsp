@@ -22,14 +22,14 @@
 					style="font-family: Impact, Charcoal, sans-serif; font-size: 25px">Home</strong>
 			</button>
 		</form>
-		<form action="listVideogames.do" method="GET">
+		<form action="listOfVideogames.do" method="GET">
 			<button type="submit" class="w3-bar-item w3-button w3-mobile">
 				<strong
 					style="font-family: Impact, Charcoal, sans-serif; font-size: 26px">List
 					All Games</strong>
 			</button>
 		</form>
-		<form action="newVideogame.do" method="GET">
+		<form action="addVideogame.do" method="GET">
 			<button type="submit" class="w3-bar-item w3-button w3-mobile">
 				<strong
 					style="font-family: Impact, Charcoal, sans-serif; font-size: 25px">New

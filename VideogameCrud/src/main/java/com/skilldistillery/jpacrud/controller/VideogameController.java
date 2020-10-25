@@ -1,10 +1,14 @@
 package com.skilldistillery.jpacrud.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.jpacrud.data.VideogameDAO;
 import com.skilldistillery.jpacrud.entities.Videogame;
@@ -12,6 +16,7 @@ import com.skilldistillery.jpacrud.entities.Videogame;
 @Controller
 public class VideogameController {
 
+	@Autowired
 	private VideogameDAO videogamedao;
 
 	@RequestMapping(path = "/")
@@ -19,15 +24,11 @@ public class VideogameController {
 		return "index";
 	}
 
-	@RequestMapping(path = "listVideogames.do", method = RequestMethod.GET)
+	@RequestMapping(path = "listOfVideogames.do", method = RequestMethod.GET)
 	public String listAllVideogames(Model model) {
-		model.addAttribute("videogames", videogamedao.findVideogames());
-		return "show";
-	}
-
-	@RequestMapping(path = "newVideogame.do", method = RequestMethod.GET)
-	public String createVideogameForm(Videogame videogame) {
-		return "newVideogame";
+		List<Videogame> videogames = videogamedao.findVideogames();
+		model.addAttribute("videogames", videogames);
+		return "listVideogames";
 	}
 
 	@RequestMapping(path = "deleteVideogame.do", method = RequestMethod.GET)
@@ -40,10 +41,10 @@ public class VideogameController {
 		return "result";
 	}
 
-	@RequestMapping(path = "newVideogame.do", method = RequestMethod.POST)
+	@RequestMapping(path = "addVideogame.do", method = RequestMethod.GET)
 	public String createVideogame(Videogame videogame, Model model) {
 		model.addAttribute("videogame", videogamedao.createVideogame(videogame));
-		return "showNewVideogame";
+		return "newVideogame";
 	}
 
 //	@RequestMapping(path = "getVideogame.do", method = RequestMethod.GET)
