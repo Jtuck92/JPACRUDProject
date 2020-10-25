@@ -16,11 +16,11 @@ CREATE SCHEMA IF NOT EXISTS `videogamedb` DEFAULT CHARACTER SET utf8 ;
 USE `videogamedb` ;
 
 -- -----------------------------------------------------
--- Table `table1`
+-- Table `videogame`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `table1` ;
+DROP TABLE IF EXISTS `videogame` ;
 
-CREATE TABLE IF NOT EXISTS `table1` (
+CREATE TABLE IF NOT EXISTS `videogame` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(75) NOT NULL,
   PRIMARY KEY (`id`))
@@ -38,11 +38,11 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `table1`
+-- Data for table `videogame`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `videogamedb`;
-INSERT INTO `table1` (`id`, `title`) VALUES (1, 'The Legend of Zelda: Majora\'s Mask');
+INSERT INTO `videogame` (`id`, `title`) VALUES (1, 'The Legend of Zelda: Majora\'s Mask');
 
 COMMIT;
 
