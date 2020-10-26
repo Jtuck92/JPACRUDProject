@@ -43,6 +43,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 START TRANSACTION;
 USE `videogamedb`;
 INSERT INTO `videogame` (`id`, `title`) VALUES (1, 'The Legend of Zelda: Majora\'s Mask');
+INSERT INTO `videogame` (`id`, `title`) VALUES (2, 'Super Smash Bros.');
+INSERT INTO `videogame` (`id`, `title`) VALUES (3, 'Metal Gear Solid');
+INSERT INTO `videogame` (`id`, `title`) VALUES (4, 'Ninja Gaiden');
+INSERT INTO `videogame` (`id`, `title`) VALUES (5, 'Super Mario 64');
+INSERT INTO `videogame` (`id`, `title`) VALUES (DEFAULT, 'Final Fantasy VI');
 
 COMMIT;
 

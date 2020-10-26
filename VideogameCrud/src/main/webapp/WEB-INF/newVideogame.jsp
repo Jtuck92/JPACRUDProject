@@ -16,16 +16,11 @@
 		<div class="row row-no-gutters">
 			<div class="col-xs-6 col-md-4"></div>
 			<div class="col-xs-6 col-md-4 text-center">
-				<form:form action="addVideogame.do" method="GET"
-					modelAttribute="videogame">
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<form:label path="title">Title</form:label>
-							<form:input type="text" class="form-control" required="required"
-								path="title" placeholder="Title" />
-						</div>
-					</div>
-				</form:form>
+				<h3 style="font-family: Impact, Charcoal, sans-serif;">
+					<strong>${videogame.title}</strong>
+				</h3>
+				<p>
+					<strong>ID Number: </strong>${videogame.id}</p>
 			</div>
 		</div>
 	</div>

@@ -36,7 +36,7 @@
 					Game</strong>
 			</button>
 		</form>
-		<form action="getVideogame.do" method=GET>
+		<form action="searchVideogame.do" method=GET>
 			<input type="number" min="1"
 				class="w3-bar-item w3-input w3-white w3-mobile pull-right"
 				name="pid" placeholder="Videogame ID">
@@ -47,11 +47,6 @@
 			</button>
 		</form>
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<br>
 </body>
 </html>
