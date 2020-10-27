@@ -44,7 +44,7 @@ public class VideogameController {
 	public String createVideogame(Videogame videogame, Model model) {
 		model.addAttribute("videogame", videogamedao.createVideogame(videogame));
 		return "newVideogame";
-	}
+	} 
 
 //	@RequestMapping(path = "getVideogame.do", method = RequestMethod.GET)
 //	public String getVideogame(Model model, int vid) {

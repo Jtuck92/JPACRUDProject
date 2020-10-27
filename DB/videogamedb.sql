@@ -47,7 +47,6 @@ INSERT INTO `videogame` (`id`, `title`) VALUES (2, 'Super Smash Bros.');
 INSERT INTO `videogame` (`id`, `title`) VALUES (3, 'Metal Gear Solid');
 INSERT INTO `videogame` (`id`, `title`) VALUES (4, 'Ninja Gaiden');
 INSERT INTO `videogame` (`id`, `title`) VALUES (5, 'Super Mario 64');
-INSERT INTO `videogame` (`id`, `title`) VALUES (DEFAULT, 'Final Fantasy VI');
 
 COMMIT;
 
